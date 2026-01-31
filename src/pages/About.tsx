@@ -6,18 +6,18 @@ import SkillChart from '../components/SkillChart';
 const About = () => {
   const skills = [
     { name: 'Python', level: 70 },
-    { name: 'Machine Learning', level: 60 },
-    { name: 'SQL', level: 80 },
-    { name: 'EXCEL', level: 80 },
-    { name: 'POWER BI', level: 85 },
-    { name: 'AWS', level: 75 },
+    { name: 'JavaScript', level: 60 },
+    { name: 'Nodejs', level: 80 },
+    { name: 'Reactjs', level: 60 },
+    { name: 'MongoDB', level: 70 },
+    { name: 'Git', level: 60 },
   ];
 
   const achievements = [
     {
       icon: <Award className="h-6 w-6" />,
-      title: 'Intro To Data Analytics',
-      description: 'Simplilearn - Data Science Specialization',
+      title: 'Generative AI, LLM Apps, AI Agents, Cursor AI',
+      description: 'Udemy Course Completion',
     },
     {
       icon: <BookOpen className="h-6 w-6" />,
@@ -27,7 +27,7 @@ const About = () => {
     {
       icon: <Users className="h-6 w-6" />,
       title: 'Team Leadership',
-      description: 'Led a team of 16 data analysts for a trainee in the syncner',
+      description: 'Led a team of 80 for Product Development trainee in the Syncner',
     },
   ];
 
@@ -51,7 +51,7 @@ const About = () => {
             About <span className="text-gold">Me</span>
           </h1>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Passionate about uncovering stories hidden in data and building intelligent systems that make a difference.
+            I love crafting smart, user-focused solutions by blending full stack skills with the power of generative AI.
           </p>
         </motion.div>
 
@@ -66,14 +66,14 @@ const About = () => {
             <div className="bg-charcoal rounded-2xl p-8">
               <img
                 src="src\pages\My ChatGPT image.png"
-                alt="Girish S"
+                alt="Hariharan M V"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
               />
               <h2 className="text-2xl font-bold text-white-smoke text-center mb-4">
-                Data Science Professional
+                Full Stack Developer & GenAI Enthusiast
               </h2>
               <p className="text-gray text-center">
-                Fresher Looking For The Data Science Role.
+                Fresher Looking For The Software Engineer Role.
               </p>
             </div>
           </motion.div>
@@ -88,10 +88,10 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold text-white-smoke mb-4">My Journey</h3>
               <p className="text-gray leading-relaxed mb-4">
-              ✨ My journey began with a love for solving puzzles and understanding how things work. In college, I discovered data science and realized how powerful data can be in telling stories and driving decisions. I completed a degree in Computer Science, took online courses in machine learning and SQL, and gained hands-on experience through two internships where I helped analyze customer data and build dashboards.
+              ✨ My journey began with a passion for building things—from simple websites to intelligent systems. During college, I explored full stack development and later discovered the creative power of generative AI. I Pursing my degree in Artificial Intelligence & Data Science, sharpened my skills in modern web frameworks, and dived deep into large language models and prompt engineering.
               </p>
               <p className="text-gray leading-relaxed">
-              🛠️ I built a sales analytics dashboard that helped a small business track their KPIs and developed a Python app that automates expense tracking from bank statements.I’m currently focused on building robust analytics pipelines and visualizations, with the aspiration to help organizations make smarter, data-driven decisions.
+              🛠️ I’ve built dynamic web apps, integrated AI models into real-time systems, and developed tools that automate workflows and enhance user interaction. I’m now focused on combining scalable backend systems with GenAI to craft innovative, user-centric solutions that solve real-world problems.
                 
               </p>
             </div>
@@ -102,7 +102,8 @@ const About = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-white-smoke">Technical Excellence</h4>
-                <p className="text-gray">Proficient in Python, SQL, and Power BI with a focus on scalable solutions.</p>
+                <p className="text-gray">Proficient in Full Stack Development (React, Node.js, Express, MongoDB) and Artificial Intelligence (Generative AI, LLM Integration, Prompt Engineering) 
+                  with a focus on building intelligent, scalable, and user-centric applications.</p>
               </div>
             </div>
 
@@ -112,7 +113,10 @@ const About = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-white-smoke">Business Impact</h4>
-                <p className="text-gray">Track record of delivering insights that increased revenue by 25% and reduced costs by 30%.</p>
+                <p className="text-gray">At GreyAIPlatforms, engaged with business clients through LinkedIn outreach and cold emails, 
+                  fostering partnerships and expanding market reach. Prepared comprehensive onboarding documentation to streamline client integration and enhance operational efficiency.
+
+.</p>
               </div>
             </div>
           </motion.div>

@@ -11,49 +11,50 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Pdf Extrator',
-      subtitle: 'Pdf sumarization with the file upload',
-      description: 'Developed because finding the gap between the AI Technology.',
+      title: 'Personal Branding Copilot',
+      subtitle: 'AI-powered Personal Branding Assistant',
+      description: 'An AI-driven platform that helps users build and refine their personal brand by generating bios, LinkedIn content, project descriptions, and career-focused insights using Gemini AI and a modern full-stack architecture.',
       image: pdfExtractorImg,
-      tech: ['Python', 'Flask','My-sql'],
-      github: 'https://github.com/Girishs07/pdf-text-extractor',
+      tech: ['React', 'Node.js','FastAPI', 'MongoDB', 'Gemini API'],
+      ExternalLink: 'https://personal-branding-co-pilot-frontend-1.onrender.com',
     },
     {
       id: 2,
-      title: 'n8n-brand-influencer',
-      subtitle: 'This project demonstrates the use of an agentic AI system built with n8n to automate and optimize influencer marketing.',
-      description: 'Brands and marketers face significant challenges in efficiently identifying the right influencers, optimizing campaign performance, and measuring return on investment (ROI) in the fast-evolving influencer marketing landscape',
+      title: 'Employee Attendance Management System',
+      subtitle: 'Smart Attendance Tracking & Management',
+      description: 'A web-based system to track employee attendance, manage check-in/check-out times, monitor work hours, and generate attendance reports with role-based access for admins and employees.',
       image: n8nInfluencerImg,
-      tech: ['Google APIs', 'n8n', 'Python', 'Local Memory'],
-      github: 'https://github.com/Girishs07/n8n-brand-influencer',
+      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+      ExternalLink: 'https://employee-frontend-kohl-psi.vercel.app/',
     },
     {
       id: 3,
-      title: 'Signal-Miner',
-      subtitle: 'Extract and analyze hiring signals to detect early indicators of startup growth',
-      description: 'Signal Miner uncovers startup growth trends by analyzing hiring patterns from LinkedIn job postings. It extracts signals like product launches, global expansion, leadership hires, and GTM shifts from Indian tech startup job data.',
-      image: signalMinerImg,
-      tech: ['Web Scraping', 'Charts', 'PowerBI', 'Notion'],
-      github: 'https://github.com/Girishs07/Signal-Miner',
+      title: 'Personalized AI Book Recommendation',
+      subtitle: 'Book recommendations based on user inputs such as genre, age, and language',
+      description: 'A Streamlit app that generates tailored book recommendations based on user-selected language, age group, and genre using the Gemini 1.5 Flash model.',
+      image: flaskAppImg,
+      tech: ['Python', 'Streamlit', 'Gemini 1.5 Flash'],
+      github: 'https://github.com/HariharanMan/Personalized-AI-Book-Recommendation',
     },
     {
       id: 4,
-      title: 'Inventory-Optimization-Analysis',
-      subtitle: 'Analysing the data of the grocery store',
-      description: 'Analyze retail inventory data to identify overstock issues, optimize stock levels, and improve inventory turnover rates',
-      image: inventoryAnalysisImg,
-      tech: ['Data Cleaning', 'Statistics', 'Data Analysis', 'B2B Solving'],
-      github: 'https://github.com/Girishs07/Inventory-Optimization-Analysis',
+      title: 'AI Content Creation Hub',
+      subtitle: 'A suite of generative AI tools for creative content generation',
+      description: 'A Streamlit-based platform powered by Gemini Flash 1.5 that offers multiple AI tools like story generators, debate creators, LinkedIn post assistants, and more to streamline and spark creativity in content development.',
+      image: signalMinerImg,
+      tech: ['Python', 'Streamlit', 'Gemini 1.5 Flash'],
+      github: 'https://github.com/HariharanMan/AI-Content-Creation-Hub',
     },
     {
       id: 5,
-      title: 'Flask_App',
-      subtitle: 'With the Python Flask Making an interactive to-do list with the my-sql database',
-      description: 'This is a simple Flask application for managing a to-do list. The application is connected to a MySQL database, allowing users to add, update, and delete tasks.',
-      image: flaskAppImg,
-      tech: ['Python','SQL','Flask'],
-      github: 'https://github.com/Girishs07/Flask_App',
+      title: 'Stock Prediction using AI',
+      subtitle: 'AI-powered stock forecasting and sentiment analysis platform',
+      description: 'A platform that predicts stock prices using historical data and AI models, analyzes news sentiment, and offers real-time insights with a Gemini-powered chatbot for financial guidance.',
+      image: inventoryAnalysisImg,
+      tech: ['Python', 'Machine Learning', 'NLP', 'Gemini API', 'Streamlit'],
+      github: 'https://github.com/HariharanMan/Stockprediction-using-AI',
     },
+    
   ];
 
   return (
@@ -76,7 +77,7 @@ const Projects = () => {
             My <span className="text-gold">Projects</span>
           </h1>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-          A curated collection of projects showcasing my skills in data science, machine learning, and analytics to solve real-world problems across industries.
+          Projects that blend full stack development and GenAI to create smart, scalable solutions for real-world challenges.
           </p>
         </motion.div>
 
@@ -122,15 +123,28 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-2">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center bg-gold/10 text-gold py-2 px-4 rounded-lg hover:bg-gold/20 transition-colors duration-200 text-sm font-medium"
-                  >
-                    <Github className="mr-2 h-4 w-4" />
-                    Github Link
-                  </a>
+                  {project.ExternalLink && (
+                    <a
+                      href={project.ExternalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center bg-gold/10 text-gold py-2 px-4 rounded-lg hover:bg-gold/20 transition-colors duration-200 text-sm font-medium"
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center bg-gold/10 text-gold py-2 px-4 rounded-lg hover:bg-gold/20 transition-colors duration-200 text-sm font-medium"
+                    >
+                      <Github className="mr-2 h-4 w-4" />
+                      Github
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

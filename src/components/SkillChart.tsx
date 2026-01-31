@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 const SkillChart = () => {
   const skills = [
-    { name: 'Python', value: 95 },
-    { name: 'Machine Learning', value: 75 },
-    { name: 'SQL', value: 85 },
-    { name: 'Visualization', value: 75 },
-    { name: 'Statistics', value: 80 },
-    { name: 'Excel', value: 75 },
+    { name: 'Python', value: 70 },
+    { name: 'JavaScript', value: 60 },
+    { name: 'Nodejs', value: 80 },
+    { name: 'Reactjs', value: 60 },
+    { name: 'MongoDB', value: 70 },
+    { name: 'Git', value: 60 },
   ];
 
   const maxValue = 100;

@@ -37,14 +37,14 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: 'Email',
-      value: 'girish792004@gmail.com',
-      href: 'mailto:girish792004@gmail.com'
+      value: 'hariharanmani253@gmail.com',
+      href: 'mailto:hariharanmani253@gmail.com'
     },
     {
       icon: <Phone className="h-6 w-6" />,
       label: 'Phone',
-      value: '+91 7200817733',
-      href: 'tel:+917200817733'
+      value: '+91 9025491610',
+      href: 'tel:+919025491610'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -58,19 +58,19 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: 'GitHub',
-      href: 'https://github.com/Girishs07',
+      href: 'https://github.com/HariharanMan',
       color: 'hover:text-black-400'
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/girishsureshkannan/',
+      href: 'https://www.linkedin.com/in/hariharanmv/',
       color: 'hover:text-blue-400'
     },
     {
       icon: <Mail className="h-6 w-6" />,
       label: 'Email',
-      href: 'mailto:girish792004@gmail.com',
+      href: 'mailto:hariharanmani253@gmail.com',
       color: 'hover:text-red-400'
     }
   ];
@@ -95,8 +95,7 @@ const Contact = () => {
             Get In <span className="text-gold">Touch</span>
           </h1>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Let's discuss how we can work together to solve your data challenges 
-            and unlock valuable insights for your business.
+            Let’s team up to transform your data into smart, strategic decisions.
           </p>
         </motion.div>
 
@@ -287,7 +286,7 @@ const Contact = () => {
                 Get a comprehensive overview of my experience, skills, and achievements.
               </p>
               <a
-                href="/Girish -Associate Product Engineer.pdf"
+                href="\Hariharan (cv).pdf"
                 download
                 className="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-lg hover:bg-gold/90 transition-all duration-300 hover:scale-105"
               >

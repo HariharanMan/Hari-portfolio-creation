@@ -20,8 +20,34 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Internship', path: '#internship' }, // Smooth scroll target
     { name: 'Contact', path: '/contact' },
   ];
+
+  // Smooth scroll handler
+const handleNavClick = (e, path) => {
+  // Only handle hash links here; let normal routes be handled by <Link>
+  if (typeof path === 'string' && path.startsWith('#')) {
+    // preventDefault only if an event was passed
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+
+    // If already on Home page -> smooth scroll to section
+    if (location && location.pathname === '/') {
+      const target = document.querySelector(path);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // If not on Home, navigate to Home with hash so the browser lands on the section
+      // (This triggers a full navigation which is fine for most setups.)
+      window.location.href = `/${path}`;
+    }
+
+    // close mobile menu if open
+    setIsMenuOpen(false);
+  }
+};
+
 
   return (
     <motion.header
@@ -36,7 +62,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <BarChart3 className="h-8 w-8 text-gold" />
-            <span className="text-white-smoke font-semibold text-xl">Girish S</span>
+            <span className="text-white-smoke font-semibold text-xl">Hariharan M V</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,7 +70,8 @@ const Header = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                to={item.path.startsWith('#') ? '/' : item.path}
+                onClick={(e) => handleNavClick(e, item.path)}
                 className={`transition-colors duration-200 ${
                   location.pathname === item.path
                     ? 'text-gold'
@@ -77,13 +104,13 @@ const Header = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.path}
+                  to={item.path.startsWith('#') ? '/' : item.path}
+                  onClick={(e) => handleNavClick(e, item.path)}
                   className={`block px-3 py-2 transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'text-gold'
                       : 'text-gray hover:text-white-smoke'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
