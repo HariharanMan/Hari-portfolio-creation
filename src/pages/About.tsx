@@ -64,7 +64,7 @@ const About = () => {
           >
             <div className="bg-charcoal rounded-2xl p-8">
               <img
-                src="My ChatGPT image.png"
+                src="/My ChatGPT image.png"
                 alt="Hariharan M V"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
               />
