@@ -11,6 +11,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -22,15 +23,44 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    setTimeout(() => setSubmitted(false), 3000);
+    try {
+      
+      const formPayload = {
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY, 
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        from_name: 'Portfolio Contact Form',
+        to: 'hariharanmani253@gmail.com' // Your email where you want to receive messages
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formPayload)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again or contact me directly.');
+      console.error('Form submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -95,7 +125,7 @@ const Contact = () => {
             Get In <span className="text-gold">Touch</span>
           </h1>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Let’s team up to transform your data into smart, strategic decisions.
+            Let’s team up to transform your ideas into smart, strategic decisions.
           </p>
         </motion.div>
 
@@ -286,7 +316,7 @@ const Contact = () => {
                 Get a comprehensive overview of my experience, skills, and achievements.
               </p>
               <a
-                href="\Hariharan (cv).pdf"
+                href="\Hariharan M V_Resume.pdf"
                 download
                 className="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-lg hover:bg-gold/90 transition-all duration-300 hover:scale-105"
               >

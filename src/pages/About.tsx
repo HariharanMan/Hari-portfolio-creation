@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { Code, TrendingUp, Award, BookOpen, Users } from 'lucide-react';
+import { Code, TrendingUp } from 'lucide-react';
 import SkillChart from '../components/SkillChart';
-
 
 const About = () => {
   const skills = [
@@ -13,21 +12,21 @@ const About = () => {
     { name: 'Git', level: 60 },
   ];
 
-  const achievements = [
+  const certifications = [
     {
-      icon: <Award className="h-6 w-6" />,
-      title: 'Generative AI, LLM Apps, AI Agents, Cursor AI',
-      description: 'Udemy Course Completion',
+      title: 'Microsoft Certified: Azure AI Fundamentals',
+      image: '/certifications/Azure.png',
+      link: 'https://www.credly.com/badges/50103af7-d9ca-40fa-b52b-397e030d8ad8/linked_in_profile',
     },
     {
-      icon: <BookOpen className="h-6 w-6" />,
-      title: 'Published Research',
-      description: 'International Journal for Science and Advance Research in Technology (IJSART)',
+      title: 'Salesforce Certified: Agentforce Specialist',
+      image: '/certifications/Salesforce.png',
+      link: 'https://trailhead.salesforce.com/en/credentials/verification/',
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: 'Team Leadership',
-      description: 'Led a team of 80 for Product Development trainee in the Syncner',
+      title: 'Snowflake Certified: SnowPro Associate Platform',
+      image: '/certifications/snowpro.png',
+      link: 'https://achieve.snowflake.com/b5aa678f-e445-4512-919c-eaf863a813a5#acc.yhnmKuIO',
     },
   ];
 
@@ -65,7 +64,7 @@ const About = () => {
           >
             <div className="bg-charcoal rounded-2xl p-8">
               <img
-                src="src\pages\My ChatGPT image.png"
+                src="src/pages/My ChatGPT image.png"
                 alt="Hariharan M V"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
               />
@@ -86,13 +85,14 @@ const About = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white-smoke mb-4">My Journey</h3>
+              <h3 className="text-2xl font-bold text-white-smoke mb-4">
+                My Journey
+              </h3>
               <p className="text-gray leading-relaxed mb-4">
-              ✨ My journey began with a passion for building things—from simple websites to intelligent systems. During college, I explored full stack development and later discovered the creative power of generative AI. I Pursing my degree in Artificial Intelligence & Data Science, sharpened my skills in modern web frameworks, and dived deep into large language models and prompt engineering.
+                ✨ My journey began with a passion for building things—from simple websites to intelligent systems. During college, I explored full stack development and later discovered the creative power of generative AI. I am pursuing my degree in Artificial Intelligence & Data Science and sharpened my skills in modern web frameworks and large language models.
               </p>
               <p className="text-gray leading-relaxed">
-              🛠️ I’ve built dynamic web apps, integrated AI models into real-time systems, and developed tools that automate workflows and enhance user interaction. I’m now focused on combining scalable backend systems with GenAI to craft innovative, user-centric solutions that solve real-world problems.
-                
+                🛠️ I’ve built dynamic web apps, integrated AI models into real-time systems, and developed tools that automate workflows and enhance user interaction. I now focus on combining scalable backend systems with GenAI to solve real-world problems.
               </p>
             </div>
 
@@ -101,9 +101,13 @@ const About = () => {
                 <Code className="h-6 w-6 text-gold" />
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white-smoke">Technical Excellence</h4>
-                <p className="text-gray">Proficient in Full Stack Development (React, Node.js, Express, MongoDB) and Artificial Intelligence (Generative AI, LLM Integration, Prompt Engineering) 
-                  with a focus on building intelligent, scalable, and user-centric applications.</p>
+                <h4 className="text-lg font-semibold text-white-smoke">
+                  Technical Excellence
+                </h4>
+                <p className="text-gray">
+                  Proficient in Full Stack Development (React, Node.js, Express, MongoDB) and Artificial Intelligence
+                  (Generative AI, LLM Integration, Prompt Engineering) with a focus on scalable, user-centric systems.
+                </p>
               </div>
             </div>
 
@@ -112,11 +116,13 @@ const About = () => {
                 <TrendingUp className="h-6 w-6 text-gold" />
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white-smoke">Business Impact</h4>
-                <p className="text-gray">At GreyAIPlatforms, engaged with business clients through LinkedIn outreach and cold emails, 
-                  fostering partnerships and expanding market reach. Prepared comprehensive onboarding documentation to streamline client integration and enhance operational efficiency.
-
-.</p>
+                <h4 className="text-lg font-semibold text-white-smoke">
+                  Business Impact
+                </h4>
+                <p className="text-gray">
+                  At GreyAIPlatforms, engaged with business clients through LinkedIn outreach and cold emails,
+                  helped expand partnerships, and prepared onboarding documentation to improve operational efficiency.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -130,10 +136,16 @@ const About = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="text-3xl font-bold text-white-smoke text-center mb-12">Technical Skills</h3>
+          <h3 className="text-3xl font-bold text-white-smoke text-center mb-12">
+            Technical Skills
+          </h3>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-xl font-semibold text-gold mb-6">Skill Proficiency</h4>
+              <h4 className="text-xl font-semibold text-gold mb-6">
+                Skill Proficiency
+              </h4>
+
               <div className="space-y-4">
                 {skills.map((skill, index) => (
                   <motion.div
@@ -160,36 +172,49 @@ const About = () => {
                 ))}
               </div>
             </div>
+
             <div>
               <SkillChart />
             </div>
           </div>
         </motion.div>
 
-        {/* Achievements */}
+        {/* Certifications Section */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-white-smoke text-center mb-12">Key Achievements</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
+          <h3 className="text-3xl font-bold text-white-smoke text-center mb-12">
+            Certifications
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certifications.map((cert, index) => (
+              <motion.a
                 key={index}
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-charcoal rounded-xl p-6 text-center hover:bg-charcoal/80 transition-colors duration-300"
+                className="bg-charcoal rounded-xl overflow-hidden border border-gold/20 shadow-lg"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gold/20 rounded-lg mb-4 text-gold">
-                  {achievement.icon}
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-5 text-center">
+                  <h4 className="text-lg font-semibold text-white-smoke hover:text-gold transition">
+                    {cert.title}
+                  </h4>
                 </div>
-                <h4 className="text-lg font-semibold text-white-smoke mb-2">{achievement.title}</h4>
-                <p className="text-gray">{achievement.description}</p>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>

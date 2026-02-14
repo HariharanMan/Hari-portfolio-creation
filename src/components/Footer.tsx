@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, BarChart3 } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-charcoal text-white-smoke py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <BarChart3 className="h-6 w-6 text-gold" />
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray/20 text-center text-gray">
-          <p>&copy; 2025 Hariharan M V. All rights reserved.</p>
+          <p>&copy; 2026 Hariharan M V. All rights reserved.</p>
         </div>
       </div>
     </footer>
